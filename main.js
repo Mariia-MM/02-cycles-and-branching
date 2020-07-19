@@ -1,19 +1,17 @@
 let N = +prompt("enter first integer");
-console.log(N);
 
 if (Number.isInteger(N) && !isNaN(N)) {
-  console.log(`first number`, N);
+  console.log(`first number:`, N);
 } else {
-  console.log(`its not an integer`);
+  console.log(`its not an integer:`, N);
 }
 
-let M = Number(prompt("enter second integer"));
-console.log(M);
+let M = +prompt("enter second integer");
 
 if (Number.isInteger(M) && !isNaN(M)) {
-  console.log(`second number`, M);
+  console.log(`second number:`, M);
 } else {
-  console.log(`its not an integer`);
+  console.log(`its not an integer:`, M);
 }
 
 //(M ^ 0) == M
@@ -46,5 +44,5 @@ if (N < M) {
       sum += i;
     }
   }
-  console.log(sum);
+  console.log(`total :`, sum);
 }
