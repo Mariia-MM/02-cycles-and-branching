@@ -5,12 +5,12 @@ N = +prompt("enter first integer");
 let attemptN = 0;
 let attemptM = 0;
 
-while ((Number.isInteger(N) == false || N == 0) && attemptN < 3) {
+while ((Number.isInteger(N) == false || N === 0) && attemptN < 3) {
   console.log(`its not an integer,try again:`, N);
   N = +prompt("enter first integer");
   attemptN++;
 }
-if (Number.isInteger(N) == false || N == 0) {
+if (Number.isInteger(N) == false || N === 0) {
   console.log(`integer not entered`);
 } else {
   console.log(`first number:`, N);
