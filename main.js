@@ -5,33 +5,29 @@ N = +prompt("enter first integer");
 let attemptN = 0;
 let attemptM = 0;
 
-<<<<<<< HEAD
+
 while ((Number.isInteger(N) == false || N === 0) && attemptN < 3) {
-=======
-while ((Number.isInteger(N) == false || N === null) && attemptN < 3) {
->>>>>>> 4e6b64f685e95dda17bb1454297836164745e4f3
+
   console.log(`its not an integer,try again:`, N);
   N = +prompt("enter first integer");
   attemptN++;
 }
-<<<<<<< HEAD
+
 if (Number.isInteger(N) == false || N === 0) {
-=======
-if (Number.isInteger(N) == false || N === null) {
->>>>>>> 4e6b64f685e95dda17bb1454297836164745e4f3
+
   console.log(`integer not entered`);
 } else {
   console.log(`first number:`, N);
 
   M = +prompt("enter second integer");
 
-  while ((Number.isInteger(M) == false || M === null) && attemptM < 3) {
+  while ((Number.isInteger(M) == false || M === 0) && attemptM < 3) {
     console.log(`its not an integer,try again:`, M);
     M = +prompt("enter second integer");
     attemptM++;
   }
 }
-if (Number.isInteger(M) == false || M === null) {
+if (Number.isInteger(M) == false || M === 0) {
   console.log(`integer not entered`);
 } else {
   console.log(`second number:`, M);
@@ -42,9 +38,9 @@ if (Number.isInteger(M) == false || M === null) {
 let i;
 if (
   Number.isInteger(N) == false ||
-  N === null ||
+  N === 0 ||
   Number.isInteger(M) == false ||
-  M === null
+  M === 0
 ) {
   console.log(`the number o both are not integer`);
 } else {
