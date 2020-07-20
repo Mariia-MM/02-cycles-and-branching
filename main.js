@@ -3,24 +3,25 @@ let M;
 
 N = +prompt("enter first integer");
 let attemptN = 0;
+let attemptM = 0;
 
-while ((Number.isInteger(N) == false || N === 0) && attemptN < 3) {
+while ((Number.isInteger(N) == false || N == 0) && attemptN < 3) {
   console.log(`its not an integer,try again:`, N);
   N = +prompt("enter first integer");
   attemptN++;
 }
-if (Number.isInteger(N) == false || N === 0) {
+if (Number.isInteger(N) == false || N == 0) {
   console.log(`integer not entered`);
 } else {
   console.log(`first number:`, N);
-}
 
-M = +prompt("enter second integer");
-let attemptM = 0;
-while ((Number.isInteger(M) == false || M === 0) && attemptM < 3) {
-  console.log(`its not an integer,try again:`, M);
   M = +prompt("enter second integer");
-  attemptM++;
+
+  while ((Number.isInteger(M) == false || M === 0) && attemptM < 3) {
+    console.log(`its not an integer,try again:`, M);
+    M = +prompt("enter second integer");
+    attemptM++;
+  }
 }
 if (Number.isInteger(M) == false || M === 0) {
   console.log(`integer not entered`);
