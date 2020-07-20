@@ -1,18 +1,20 @@
 let N = +prompt("enter first integer");
-
-if (Number.isInteger(N) && !isNaN(N)) {
-  console.log(`first number:`, N);
-} else {
-  console.log(`its not an integer:`, N);
+let attemptN = 0;
+while (attemptN < 3 && !(Number.isInteger(N) && !isNaN(N))) {
+  console.log(`its not an integer,try again:`, N);
+  N = +prompt("enter first integer");
+  attemptN++;
 }
+console.log(`first number:`, N);
 
 let M = +prompt("enter second integer");
-
-if (Number.isInteger(M) && !isNaN(M)) {
-  console.log(`second number:`, M);
-} else {
-  console.log(`its not an integer:`, M);
+let attemptM = 0;
+while (attemptM < 3 && !(Number.isInteger(M) && !isNaN(M))) {
+  console.log(`its not an integer,try again:`, M);
+  M = +prompt("enter second integer");
+  attemptM++;
 }
+console.log(`second number:`, M);
 
 //(M ^ 0) == M
 
