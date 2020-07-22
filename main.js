@@ -5,16 +5,13 @@ N = +prompt("enter first integer");
 let attemptN = 0;
 let attemptM = 0;
 
-
 while ((Number.isInteger(N) == false || N === 0) && attemptN < 3) {
-
   console.log(`its not an integer,try again:`, N);
   N = +prompt("enter first integer");
   attemptN++;
 }
 
 if (Number.isInteger(N) == false || N === 0) {
-
   console.log(`integer not entered`);
 } else {
   console.log(`first number:`, N);
@@ -47,29 +44,16 @@ if (
   let evenNumbers = confirm(`To skip even numbers?`);
   console.log(`to skip even numbers?`, evenNumbers);
 
-  if (N < M) {
-    let sum = 0;
-    for (i = N; i <= M; i++) {
-      if (evenNumbers) {
-        if (i % 2 != 0) {
-          sum += i;
-        }
-      } else {
+  let sum = 0;
+  for (i = Math.min(M, N); i <= Math.max(M, N); i++) {
+    if (evenNumbers) {
+      if (i % 2 != 0) {
         sum += i;
       }
+    } else {
+      sum += i;
     }
-    console.log(sum);
-  } else {
-    let sum = 0;
-    for (i = M; i <= N; i++) {
-      if (evenNumbers) {
-        if (i % 2 != 0) {
-          sum += i;
-        }
-      } else {
-        sum += i;
-      }
-    }
-    console.log(`total :`, sum);
   }
+
+  console.log(`total :`, sum);
 }
